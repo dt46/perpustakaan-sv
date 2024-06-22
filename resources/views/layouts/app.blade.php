@@ -45,7 +45,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="{{ url('/') }}" class="navbar-brand p-0">
                     <h1 class="m-0">Sekolah Vokasi</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -54,10 +54,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="{{ url('/') }}" class="nav-item nav-link active">Beranda</a>
-                        <a href="{{ url('/profil') }}" class="nav-item nav-link">Profil</a>
-                        <a href="{{ url('/pendataan') }}" class="nav-item nav-link">Pendataan</a>
-                        <a href="{{ url('/syarat') }}" class="nav-item nav-link">Syarat dan Ketentuan</a>
+                        <a href="{{ url('/') }}" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Beranda</a>
+                        <a href="{{ url('/profil') }}" class="nav-item nav-link {{ Request::is('profil') ? 'active' : '' }}">Profil</a>
+                        <a href="{{ url('/buku') }}" class="nav-item nav-link {{ Request::is('buku') ? 'active' : '' }}">Buku</a>
+                        <a href="{{ url('/syarat') }}" class="nav-item nav-link {{ Request::is('syarat') ? 'active' : '' }}">Syarat dan Ketentuan</a>
                     </div>
                     <a href="{{ url('/login') }}" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
                 </div>

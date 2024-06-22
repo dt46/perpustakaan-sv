@@ -10,8 +10,8 @@ Route::get('/profil', function () {
     return view('pages.profil');
 });
 
-Route::get('/pendataan', function () {
-    return view('pages.pendataan');
+Route::get('/buku', function () {
+    return view('pages.buku');
 });
 
 Route::get('/syarat', function () {
